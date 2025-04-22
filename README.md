@@ -40,4 +40,13 @@ There are also some terms you'll encounter that refer to steps within each of th
 **Indexing Stage**  
 `Indexes:` Once you've ingested your data, LlamaIndex will help you index the data into a structure that's easy to retrieve. This usually involves generating vector embeddings which are stored in a specialized database called a vector store. Indexes can also store a variety of metadata about your data.
 
-`Embeddings:` LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.
+`Embeddings:` LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.  
+
+## Querying Stage
+`Retrievers:` A retriever defines how to efficiently retrieve relevant context from an index when given a query. Your retrieval strategy is key to the relevancy of the data retrieved and the efficiency with which it's done.
+
+`Routers:` A router determines which retriever will be used to retrieve relevant context from the knowledge base. More specifically, the RouterRetriever class, is responsible for selecting one or multiple candidate retrievers to execute a query. They use a selector to choose the best option based on each candidate's metadata and the query.
+
+`Node Postprocessors:` A node postprocessor takes in a set of retrieved nodes and applies transformations, filtering, or re-ranking logic to them.
+
+`Response Synthesizers:` A response synthesizer generates a response from an LLM, using a user query and a given set of retrieved text chunks.
