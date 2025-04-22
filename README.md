@@ -29,15 +29,15 @@ There are five key stages within RAG, which in turn will be a part of most large
 
 ![](/images/stages.png)
 
-## Important concepts within RAG#
+## Important concepts within RAG
 There are also some terms you'll encounter that refer to steps within each of these stages.
 
-<span style="color:blue">**Loading stage**</span>
-Nodes and Documents: A Document is a container around any data source - for instance, a PDF, an API output, or retrieve data from a database. A Node is the atomic unit of data in LlamaIndex and represents a "chunk" of a source Document. Nodes have metadata that relate them to the document they are in and to other nodes.
+**Loading stage**
+<code style="color : blue">**Nodes and Documents:**,/code> A Document is a container around any data source - for instance, a PDF, an API output, or retrieve data from a database. A Node is the atomic unit of data in LlamaIndex and represents a "chunk" of a source Document. Nodes have metadata that relate them to the document they are in and to other nodes.
 
-Connectors: A data connector (often called a Reader) ingests data from different data sources and data formats into Documents and Nodes.
+<code style="color : blue">**Connectors**</code>: A data connector (often called a Reader) ingests data from different data sources and data formats into Documents and Nodes.
 
-Indexing Stage#
-Indexes: Once you've ingested your data, LlamaIndex will help you index the data into a structure that's easy to retrieve. This usually involves generating vector embeddings which are stored in a specialized database called a vector store. Indexes can also store a variety of metadata about your data.
+**Indexing Stage**
+<code style="color : blue">**Indexes**</code>: Once you've ingested your data, LlamaIndex will help you index the data into a structure that's easy to retrieve. This usually involves generating vector embeddings which are stored in a specialized database called a vector store. Indexes can also store a variety of metadata about your data.
 
-Embeddings: LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.
+<code style="color : blue">**Embeddings**</code>: LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.
