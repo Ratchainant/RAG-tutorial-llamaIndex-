@@ -14,7 +14,7 @@ Even if what you're building is a chatbot or an agent, you'll want to know RAG t
 
 ![](/images/basic_rag.png)
 
-## Stages within RAG#
+## Stages within RAG
 There are five key stages within RAG, which in turn will be a part of most larger applications you build. These are:
 
 - Loading: this refers to getting your data from where it lives -- whether it's text files, PDFs, another website, a database, or an API -- into your workflow. LlamaHub provides hundreds of connectors to choose from.
@@ -26,3 +26,18 @@ There are five key stages within RAG, which in turn will be a part of most large
 - Querying: for any given indexing strategy there are many ways you can utilize LLMs and LlamaIndex data structures to query, including sub-queries, multi-step queries and hybrid strategies.
 
 - Evaluation: a critical step in any flow is checking how effective it is relative to other strategies, or when you make changes. Evaluation provides objective measures of how accurate, faithful and fast your responses to queries are.
+
+![](/images/stages.png)
+
+## Important concepts within RAG#
+There are also some terms you'll encounter that refer to steps within each of these stages.
+
+<span style="color:blue">**Loading stage**</span>
+Nodes and Documents: A Document is a container around any data source - for instance, a PDF, an API output, or retrieve data from a database. A Node is the atomic unit of data in LlamaIndex and represents a "chunk" of a source Document. Nodes have metadata that relate them to the document they are in and to other nodes.
+
+Connectors: A data connector (often called a Reader) ingests data from different data sources and data formats into Documents and Nodes.
+
+Indexing Stage#
+Indexes: Once you've ingested your data, LlamaIndex will help you index the data into a structure that's easy to retrieve. This usually involves generating vector embeddings which are stored in a specialized database called a vector store. Indexes can also store a variety of metadata about your data.
+
+Embeddings: LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.
