@@ -11,3 +11,5 @@ LLMs are trained on enormous bodies of data but they aren't trained on your data
 In RAG, your data is loaded and prepared for queries or "indexed". User queries act on the index, which filters your data down to the most relevant context. This context and your query then go to the LLM along with a prompt, and the LLM provides a response.
 
 Even if what you're building is a chatbot or an agent, you'll want to know RAG techniques for getting data into your application.
+
+![](/images/basic_rag.png)
