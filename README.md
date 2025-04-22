@@ -37,7 +37,7 @@ There are also some terms you'll encounter that refer to steps within each of th
 
 `Connectors:` A data connector (often called a Reader) ingests data from different data sources and data formats into Documents and Nodes.
 
-**Indexing Stage**
+**Indexing Stage**  
 `Indexes:` Once you've ingested your data, LlamaIndex will help you index the data into a structure that's easy to retrieve. This usually involves generating vector embeddings which are stored in a specialized database called a vector store. Indexes can also store a variety of metadata about your data.
 
 `Embeddings:` LLMs generate numerical representations of data called embeddings. When filtering your data for relevance, LlamaIndex will convert queries into embeddings, and your vector store will find data that is numerically similar to the embedding of your query.
